@@ -20,7 +20,7 @@
             android:layout_height="219dp">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/RecyclerImage"
                 android:layout_width="0dp"
                 android:layout_height="136dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
                 android:text="TextView"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                app:layout_constraintTop_toBottomOf="@+id/RecyclerImage" />
 
             <TextView
                 android:id="@+id/Location"
