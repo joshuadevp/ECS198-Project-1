@@ -1,5 +1,6 @@
 package com.example.project1
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,9 @@ import android.widget.TextView
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import java.lang.Exception
+import android.view.View.OnClickListener;
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 
 class ListRecyclerViewAdapter(private val events: List<FoodTruck>): RecyclerView.Adapter<ListRecyclerViewAdapter.ViewHolder>(){
 
@@ -42,6 +46,18 @@ class ListRecyclerViewAdapter(private val events: List<FoodTruck>): RecyclerView
                 5-> R.drawable.heftygyro
                 else -> throw Exception("Incorrect image number")
             })
+
+            holder.itemView.setOnClickListener {
+                val intent = Intent(it.context, FoodTruckDetail::class.java).apply{
+                    putExtra("Name", event.name)
+                    putExtra("Loc", event.loc)
+                    putExtra("Time", event.time)
+                    putExtra("ImgNum", event.imgNum)
+                    putExtra("Description", event.desc)
+                    putExtra("Link", event.link)
+                }
+                it.context.startActivity(intent)
+            }
         }
     }
 
