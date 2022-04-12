@@ -19,7 +19,11 @@ class FoodTruckDetail : AppCompatActivity() {
         findViewById<TextView>(R.id.FullScreenLocation).text = intent.getStringExtra("Loc")
         findViewById<TextView>(R.id.FullScreenTime).text = intent.getStringExtra("Time")
         findViewById<TextView>(R.id.FullScreenDesc).text = intent.getStringExtra("Description")
-        findViewById<TextView>(R.id.FullScreenLink).text = intent.getStringExtra("Link")
+        findViewById<TextView>(R.id.FullScreenLink).setOnClickListener{
+            // IMPLEMENT INTENT TO OPEN WEB BROWSER WITH LINK
+            intent.getStringExtra("Link")
+        }
+
         findViewById<ImageView>(R.id.FullScreenImage).setImageResource( when (intent.getIntExtra("ImgNum",0)) {
             0-> R.drawable.streettaco
             1-> R.drawable.buckgrill
