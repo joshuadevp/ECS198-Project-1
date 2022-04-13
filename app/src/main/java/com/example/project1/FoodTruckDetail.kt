@@ -1,5 +1,7 @@
 package com.example.project1
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -20,8 +22,9 @@ class FoodTruckDetail : AppCompatActivity() {
         findViewById<TextView>(R.id.FullScreenTime).text = intent.getStringExtra("Time")
         findViewById<TextView>(R.id.FullScreenDesc).text = intent.getStringExtra("Description")
         findViewById<TextView>(R.id.FullScreenLink).setOnClickListener{
-            // IMPLEMENT INTENT TO OPEN WEB BROWSER WITH LINK
-            intent.getStringExtra("Link")
+            val uri = Uri.parse(intent.getStringExtra("Link"))
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            startActivity(intent)
         }
 
         findViewById<ImageView>(R.id.FullScreenImage).setImageResource( when (intent.getIntExtra("ImgNum",0)) {
