@@ -1,4 +1,4 @@
-package com.example.project1
+package com.example.project1.Model
 
 data class FoodTruck(
     var ID: Int,

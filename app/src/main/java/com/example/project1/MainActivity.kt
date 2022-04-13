@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.project1.Model.FoodTruck
 
 class MainActivity : AppCompatActivity() {
     val trucks = listOf(
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             4,
             "Bangin Bowls",
             4,
-            "TerceroDC",
+            "Tercero DC",
             "2pm - 6pm",
             "We are a Latin fusion food truck buffet, inspired by South American and Caribbean food, to bring to our beloved city Sacramento something different, healthy, with many flavors and with fresh grilled meats. Bangin 'Bowls was created with the purpose of taking a typical Latin food to another level, such as our famous BOWLS with a street style, our FRIES CARGADAS and CHURROS SUNDAE always thinking about what our customers would like and giving the best of us.",
             "https://www.labanginbowls.com/"
@@ -67,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val adapter = TruckListRecyclerViewAdapter(trucks)
+        val adapter = RecyclerViewAdapter(trucks)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 

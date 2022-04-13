@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="408dp"
+        android:layout_height="603dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nameViewFull"
+                android:layout_width="378dp"
+                android:layout_height="40dp"
+                android:text="TextView"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewFull" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/locationView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/locationView"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@android:drawable/ic_dialog_map" />
+
+            <TextView
+                android:id="@+id/locationView"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.346"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameViewFull" />
+
+            <ImageView
+                android:id="@+id/imageViewFull"
+                android:layout_width="378dp"
+                android:layout_height="228dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/authentic_street_taco" />
+
+            <TextView
+                android:id="@+id/linkView"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="28dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.272"
+                app:layout_constraintStart_toEndOf="@+id/locationView"
+                app:layout_constraintTop_toBottomOf="@+id/nameViewFull" />
+
+            <TextView
+                android:id="@+id/timeView"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.346"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/locationView" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/timeView"
+                app:layout_constraintEnd_toStartOf="@+id/timeView"
+                app:layout_constraintHorizontal_bias="0.727"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/timeView"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+            <TextView
+                android:id="@+id/descriptionView"
+                android:layout_width="398dp"
+                android:layout_height="205dp"
+                android:isScrollContainer="true"
+                android:overScrollMode="always"
+                android:scrollbars="vertical"
+                android:text="TextView"
+                android:textSize="20sp"
+                android:verticalScrollbarPosition="defaultPosition"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeView"
+                app:layout_constraintVertical_bias="0.567" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
